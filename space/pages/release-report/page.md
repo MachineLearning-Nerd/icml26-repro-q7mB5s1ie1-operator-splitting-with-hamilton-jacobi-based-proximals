@@ -28,15 +28,26 @@ The fixed command is:
 uv run --frozen python -m reproduction.run
 ```
 
-The current cumulative evidence comes from Git commit
-`1e6c16b3bc08dda235b956e09b26dfcde944c4da`, run
-`108d9cac-f2d1-469e-8371-3381a2849645`. It used Hugging Face
+The release-candidate cumulative evidence comes from Git commit
+`1cbb9a25a9f8a64f2f1643f49ed3743d860ef17e`, run
+`f4ec095c-9db6-487c-80f6-7aada25802d8`. It used Hugging Face
 `cpu-upgrade` with image
 `ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim`. Eight useful cores were
 estimated, the process affinity exposed 64 CPUs, in-program runtime was
-53.746125 seconds, and provider duration was 11m02s. No GPU was used.
+55.064327 seconds, and provider duration was 1m14s. No GPU was used.
 
-[Download the complete raw cumulative output](../../evidence/cumulative/run_108d9cac.json).
+[Download the complete raw cumulative output](../../evidence/cumulative/run_f4ec095c.json).
+
+The release-critical commands were:
+
+```text
+uv run --frozen python -m reproduction.run
+orx exp run f6a778b2-5cd4-4ade-ab9d-e08598c60fee --flavor cpu-upgrade --image ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim --timeout 2h
+uv run --frozen marimo check --strict notebooks/hj_prox_reproduction.py
+uv run --frozen python tools/prepare_release.py
+uv run --frozen python tools/audit_space.py <fresh-candidate-directory> .openresearch/artifacts/cumulative/red_team_round5.json
+(cd space && sha256sum -c ../.openresearch/release/upload-manifest.sha256)
+```
 
 ## Release state
 

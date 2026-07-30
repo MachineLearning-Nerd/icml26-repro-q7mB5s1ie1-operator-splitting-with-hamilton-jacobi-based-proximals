@@ -147,7 +147,7 @@ judge behavior.
 The passing cumulative run used Hugging Face `cpu-upgrade` with image
 `ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim`. Eight useful cores were
 estimated; the process affinity exposed 64 CPUs. The measured in-program
-runtime was 53.746 seconds; provider duration was 11m02s including
+runtime was 55.064 seconds; provider duration was 1m14s including
 provisioning, image setup, cloning, and dependency installation. No GPU was
 used.
 

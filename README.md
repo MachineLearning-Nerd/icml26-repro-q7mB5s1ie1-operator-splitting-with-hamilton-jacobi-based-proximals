@@ -28,7 +28,7 @@ corrected interpretation separately; they are not presented as proofs.
 - [Release forecast and evidence gate](reports/reproduction/release-report.md)
 - [Self-contained tutorial notebook](notebooks/hj_prox_reproduction.py)
 - [Evaluator-visible Space candidate](space/pages/index.md)
-- [Raw cumulative evidence](space/evidence/cumulative/run_108d9cac.json)
+- [Raw cumulative evidence](space/evidence/cumulative/run_f4ec095c.json)
 
 ## Experiment log
 
@@ -54,7 +54,7 @@ uv run --frozen python -m reproduction.run
 The cumulative experiment is CPU-heavy and was formally run on Hugging Face
 `cpu-upgrade` with
 `ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim`; its in-program runtime
-was 53.746 seconds and provider duration was 11m02s. No GPU was used.
+was 55.064 seconds and provider duration was 1m14s. No GPU was used.
 
 For the bounded tutorial:
 

@@ -39,6 +39,6 @@ rejected.
 - [Step-product control](../../evidence/claim4/negative_control.json)
 - [Control output](../../evidence/claim4/negative_control_output.json)
 - [Limitations](../../evidence/claim4/limitations.md)
-- [Raw PDHG result and checker output](../../evidence/cumulative/run_108d9cac.json)
+- [Raw PDHG result and checker output](../../evidence/cumulative/run_f4ec095c.json)
 - [Executed PDHG source](../../reproduction/empirical.py)
 - [Paper-scale independent checker](../../reproduction/verify_empirical.py)

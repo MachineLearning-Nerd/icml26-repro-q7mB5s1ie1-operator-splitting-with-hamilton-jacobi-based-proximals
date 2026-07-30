@@ -8,6 +8,5 @@
 | 4 | Current Claim 4 | yes | yes | yes | yes | yes | yes | FALSIFIED |
 | 5 | Current Claim 5 | yes | yes | yes | yes | yes | yes | FALSIFIED |
 
-All rows are complete. The publication gate still requires the cumulative
-candidate rerun, manifest/subset checks, secret scan, and evaluator-blind
-review.
+All rows are complete. The cumulative candidate rerun, protected-revision
+check, manifest verification, secret scan, and evaluator-blind review pass.

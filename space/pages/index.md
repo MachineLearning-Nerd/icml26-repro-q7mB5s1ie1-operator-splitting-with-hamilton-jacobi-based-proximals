@@ -35,4 +35,4 @@ reachable under **Historical rejected baseline**.
 
 The complete passing run record, including inline raw outputs, CPU allocation,
 seeds, checkers, and controls, is
-[downloadable here](../evidence/cumulative/run_108d9cac.json).
+[downloadable here](../evidence/cumulative/run_f4ec095c.json).

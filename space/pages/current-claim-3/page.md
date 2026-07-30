@@ -41,6 +41,6 @@ fixed-point residual 0.00310. The invalid `tL=2.5` control was rejected.
 - [Step-violating control](../../evidence/claim3/negative_control.json)
 - [Control output](../../evidence/claim3/negative_control_output.json)
 - [Limitations](../../evidence/claim3/limitations.md)
-- [Raw DRS/DYS traces and checker output](../../evidence/cumulative/run_108d9cac.json)
+- [Raw DRS/DYS traces and checker output](../../evidence/cumulative/run_f4ec095c.json)
 - [Executed DRS/DYS source](../../reproduction/empirical.py)
 - [Paper-scale independent checker](../../reproduction/verify_empirical.py)
