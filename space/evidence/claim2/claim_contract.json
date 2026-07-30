@@ -1,0 +1,7 @@
+{
+  "claim": 2,
+  "source": "arXiv:2601.22370v4, Theorems 3.5 and 3.6 with Assumption 3.4",
+  "statement": "Under the assumptions printed in Theorems 3.5 and 3.6, the HJ-Prox PPM and PGD iterates converge almost surely to a minimizer of f+g.",
+  "acceptance": "FALSIFIED if one construction satisfies every printed assumption and has no minimizer, with the named iterates diverging even after summable HJ errors.",
+  "verdict": "FALSIFIED"
+}

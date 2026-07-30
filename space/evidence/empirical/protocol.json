@@ -1,0 +1,34 @@
+{
+  "purpose": "Finite paper-scale corroboration of the intended nonempty-minimizer interpretation; not proof of almost-sure theorems",
+  "fixed_command": "uv run --frozen python -m reproduction.run",
+  "estimated_cores": 4,
+  "selected_compute": "huggingface",
+  "selected_flavor": "cpu-upgrade",
+  "container_image": "ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim",
+  "seeds": {
+    "claim2": 26012,
+    "drs": 26013,
+    "dys": 26014,
+    "pdhg": 26015
+  },
+  "scales": {
+    "ppm_pgd_dimension": 500,
+    "ppm_pgd_precommitted_horizons": [100, 300, 1000, 3000, 10000, 30000],
+    "drs_trend_dimension": 256,
+    "dys_observations_by_dimension": "300x60",
+    "pdhg_observations_by_dimension": "250x500"
+  },
+  "controls": [
+    "finite-sum t_k=0.5/(k+1)^2 for PGD violates sum_k t_k=infinity",
+    "DYS tL=2.5 violates tL<2",
+    "PDHG step product 4 violates product<1"
+  ],
+  "acceptance": {
+    "ppm_relative_error_max": 0.08,
+    "pgd_relative_error_max": 0.03,
+    "drs_reference_correlation_min": 0.9,
+    "dys_reference_correlation_min": 0.95,
+    "dys_fixed_point_residual_max": 0.08,
+    "pdhg_reference_correlation_min": 0.98
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "claim": 4,
+  "theorem": "3.10",
+  "dimension": 1,
+  "f": "identity",
+  "g": "absolute_value",
+  "g_conjugate": "indicator[-1,1]",
+  "operator_norm": 0,
+  "tau": 0.5,
+  "sigma": 0.5,
+  "dual_update_at_zero": "y_(k+1)=0",
+  "primal_update": "x_(k+1)=x_k-tau",
+  "objective": "identity",
+  "descent_witness": "F(x-1)=F(x)-1",
+  "drift_argument": "k*tau->infinity and sum(error_k)<infinity",
+  "t": 0.5,
+  "delta_power": 4,
+  "alpha_power": 2,
+  "mc_target_power": 2,
+  "sample_witness": "ceil(max(8*J_k/alpha_k,8*J_k*M_k/(alpha_k*b_k^2)))"
+}

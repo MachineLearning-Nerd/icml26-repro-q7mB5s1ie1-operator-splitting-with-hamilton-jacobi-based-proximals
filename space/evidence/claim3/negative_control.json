@@ -1,0 +1,18 @@
+{
+  "claim": 3,
+  "theorems": ["3.8", "3.9"],
+  "dimension": 1,
+  "f": "zero",
+  "g": "identity",
+  "h": "zero",
+  "h_smooth_bound": 1,
+  "objective": "identity",
+  "descent_witness": "F(x-1)=F(x)-1",
+  "exact_update": "state_(k+1)=state_k-t",
+  "drift_argument": "k*t->infinity and sum(error_k)<infinity",
+  "t": 3,
+  "delta_power": 4,
+  "alpha_power": 2,
+  "mc_target_power": 2,
+  "sample_witness": "ceil(max(8*J_k/alpha_k,8*J_k*M_k/(alpha_k*b_k^2)))"
+}

@@ -1,0 +1,7 @@
+{
+  "claim": 3,
+  "source": "arXiv:2601.22370v4, Theorems 3.8 and 3.9 with Assumption 3.7",
+  "statement": "Under the assumptions printed in Theorems 3.8 and 3.9, HJ-Prox DRS and DYS converge almost surely to a minimizer of f+g or f+g+h.",
+  "acceptance": "FALSIFIED if one construction satisfies every printed DRS/DYS assumption, including nonzero smooth-term auditing and schedule conditions, but has no minimizer and divergent iterates.",
+  "verdict": "FALSIFIED"
+}
