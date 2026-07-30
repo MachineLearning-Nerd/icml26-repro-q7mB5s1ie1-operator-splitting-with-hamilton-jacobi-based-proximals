@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "title": "Repro - HJ-Prox Operator Splitting",
+  "emoji": "🎯",
+  "space_id": "DineshAI/q7mB5s1ie1",
+  "paper": null,
+  "tags": [
+    "icml2026-repro",
+    "paper-q7mB5s1ie1"
+  ],
+  "updated_at": "2026-07-30T04:21:36+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - HJ-Prox Operator Splitting",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "overview",
+        "title": "overview",
+        "file": "pages/overview/page.md",
+        "children": []
+      },
+      {
+        "slug": "claims",
+        "title": "claims",
+        "file": "pages/claims/page.md",
+        "children": []
+      },
+      {
+        "slug": "evidence",
+        "title": "evidence",
+        "file": "pages/evidence/page.md",
+        "children": []
+      },
+      {
+        "slug": "conclusion",
+        "title": "conclusion",
+        "file": "pages/conclusion/page.md",
+        "children": []
+      },
+      {
+        "slug": "verification-run",
+        "title": "verification-run",
+        "file": "pages/verification-run/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 2860,
+  "revision": "1785385296934452488"
+}

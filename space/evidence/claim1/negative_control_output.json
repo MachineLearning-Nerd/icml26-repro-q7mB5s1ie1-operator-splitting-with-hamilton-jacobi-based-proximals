@@ -1,0 +1,9 @@
+{
+  "claim": 1,
+  "status": "REJECTED",
+  "proof_obligations": 11,
+  "failures": [
+    "summed IBP dimension coefficient must be n"
+  ],
+  "expected_failure": true
+}

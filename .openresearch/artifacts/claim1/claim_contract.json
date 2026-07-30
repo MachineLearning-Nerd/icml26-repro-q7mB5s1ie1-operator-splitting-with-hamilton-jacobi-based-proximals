@@ -1,0 +1,13 @@
+{
+  "claim": 1,
+  "source": "arXiv:2601.22370v4, Theorem 3.2, equation (6), Appendix A",
+  "statement": "For every finite lower-semicontinuous convex f:R^n->R, every x in R^n, and positive t and delta, ||prox_delta_tf(x)-prox_tf(x)|| <= sqrt(n*t*delta).",
+  "quantifiers": {
+    "dimension": "every positive integer n",
+    "function": "every finite lower-semicontinuous convex f:R^n->R",
+    "query": "every x in R^n",
+    "parameters": "every t>0 and delta>0"
+  },
+  "acceptance": "The independent checker accepts every symbolic proof obligation and rejects the dimension-coefficient mutation.",
+  "verdict": "VERIFIED"
+}
