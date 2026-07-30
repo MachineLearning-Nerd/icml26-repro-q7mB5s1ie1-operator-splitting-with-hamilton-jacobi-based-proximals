@@ -7,6 +7,7 @@ import os
 import platform
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -46,11 +47,11 @@ def main() -> int:
     started = time.perf_counter()
     metadata = {
         "fixed_command": "uv run --frozen python -m reproduction.run",
-        "estimated_cores": 1,
-        "selected_compute": "local",
-        "selected_flavor": "local",
+        "estimated_cores": 4,
+        "selected_compute": "huggingface",
+        "selected_flavor": "cpu-upgrade",
         "actual_cpu_allocation": cpu_allocation(),
-        "process_max_threads": 1,
+        "process_max_threads": "uncapped within cpu-upgrade allocation",
         "git_sha": git_sha(),
         "python": platform.python_version(),
         "platform": platform.platform(),
@@ -70,8 +71,26 @@ def main() -> int:
         print("negative control unexpectedly passed", file=sys.stderr)
         return 1
 
+    from reproduction.empirical import write_result
+
+    result_path = Path(tempfile.gettempdir()) / "hj_prox_empirical.json"
+    result = write_result(result_path)
+    print("EMPIRICAL_RAW " + json.dumps(result, sort_keys=True))
+    empirical_check = subprocess.run(
+        [sys.executable, "-m", "reproduction.verify_empirical", str(result_path)],
+        cwd=ROOT,
+        capture_output=True,
+        check=False,
+        text=True,
+    )
+    print("EMPIRICAL_CHECKER " + empirical_check.stdout.strip())
+    if empirical_check.returncode != 0:
+        print(empirical_check.stderr, file=sys.stderr)
+        return 1
+
     summary = {
         "claim_1": "VERIFIED",
+        "claims_2_4_intended_interpretation": "CORROBORATED",
         "control": "EXPECTED_FAILURE",
         "runtime_seconds": round(time.perf_counter() - started, 6),
     }
