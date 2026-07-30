@@ -1,0 +1,7 @@
+{
+  "claim": 4,
+  "source": "arXiv:2601.22370v4, Theorem 3.10, equation (12), and Assumption 3.7",
+  "statement": "For proper convex LSC f,g, the displayed HJ-Prox PDHG updates using prox(g*) and prox(f), with tau*sigma*||A||^2<1 and the stated schedules, converge almost surely to a minimizer of f(x)+g(Ax).",
+  "acceptance": "FALSIFIED if the displayed conjugate and primal updates are well-defined, every printed condition holds, and the objective has no minimizer with divergent primal iterates.",
+  "verdict": "FALSIFIED"
+}

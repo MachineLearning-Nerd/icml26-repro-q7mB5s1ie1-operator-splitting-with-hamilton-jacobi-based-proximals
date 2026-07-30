@@ -1,0 +1,1 @@
+{"claim":4,"status":"REJECTED","assumptions_satisfied":false,"counterexample":"F(x)=x has no minimizer because F(x-1)<F(x)","failures":["PDHG condition tau*sigma*||A||^2<1 fails"],"expected_failure":true}

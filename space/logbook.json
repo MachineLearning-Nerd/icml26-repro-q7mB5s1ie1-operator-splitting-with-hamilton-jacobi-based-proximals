@@ -21,6 +21,24 @@
         "children": []
       },
       {
+        "slug": "current-claim-2",
+        "title": "Current Claim 2 — falsified as printed",
+        "file": "pages/current-claim-2/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim-3",
+        "title": "Current Claim 3 — falsified as printed",
+        "file": "pages/current-claim-3/page.md",
+        "children": []
+      },
+      {
+        "slug": "current-claim-4",
+        "title": "Current Claim 4 — falsified as printed",
+        "file": "pages/current-claim-4/page.md",
+        "children": []
+      },
+      {
         "slug": "visibility",
         "title": "Candidate visibility matrix",
         "file": "pages/visibility/page.md",

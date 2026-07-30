@@ -31,6 +31,16 @@ def run_checker(certificate: Path) -> subprocess.CompletedProcess[str]:
     )
 
 
+def run_counterexample(case: Path) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        [sys.executable, "-m", "reproduction.verify_claims234", str(case)],
+        cwd=ROOT,
+        capture_output=True,
+        check=False,
+        text=True,
+    )
+
+
 def git_sha() -> str:
     result = subprocess.run(
         ["git", "rev-parse", "HEAD"],
@@ -70,8 +80,23 @@ def main() -> int:
         print("negative control unexpectedly passed", file=sys.stderr)
         return 1
 
+    claim_statuses: dict[str, str] = {"claim_1": "VERIFIED"}
+    for claim in (2, 3, 4):
+        claim_dir = ROOT / ".openresearch" / "artifacts" / f"claim{claim}"
+        accepted_case = run_counterexample(claim_dir / "counterexample.json")
+        print(f"CLAIM{claim}_CHECKER " + accepted_case.stdout.strip())
+        if accepted_case.returncode != 0:
+            print(accepted_case.stderr, file=sys.stderr)
+            return 1
+        rejected_case = run_counterexample(claim_dir / "negative_control.json")
+        print(f"CLAIM{claim}_NEGATIVE_CONTROL " + rejected_case.stdout.strip())
+        if rejected_case.returncode == 0:
+            print(f"Claim {claim} negative control unexpectedly passed", file=sys.stderr)
+            return 1
+        claim_statuses[f"claim_{claim}"] = "FALSIFIED"
+
     summary = {
-        "claim_1": "VERIFIED",
+        **claim_statuses,
         "control": "EXPECTED_FAILURE",
         "runtime_seconds": round(time.perf_counter() - started, 6),
     }

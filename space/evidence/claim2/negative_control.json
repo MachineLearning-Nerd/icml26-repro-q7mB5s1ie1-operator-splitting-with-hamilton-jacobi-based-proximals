@@ -1,0 +1,18 @@
+{
+  "claim": 2,
+  "theorems": ["3.5", "3.6"],
+  "dimension": 1,
+  "f": "zero",
+  "g": "quadratic",
+  "objective": "identity",
+  "descent_witness": "F(x-1)=F(x)-1",
+  "exact_update": "x_(k+1)=x_k-t_k",
+  "drift_argument": "sum(t_k)=infinity and sum(error_k)<infinity",
+  "t_prefactor": 0.5,
+  "f_smooth_bound": 1,
+  "t_power": 1,
+  "delta_power": 4,
+  "alpha_power": 2,
+  "mc_target_power": 2,
+  "sample_witness": "ceil(max(8*J_k/alpha_k,8*J_k*M_k/(alpha_k*b_k^2)))"
+}

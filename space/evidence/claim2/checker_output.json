@@ -1,0 +1,1 @@
+{"claim":2,"status":"FALSIFIED","assumptions_satisfied":true,"counterexample":"F(x)=x has no minimizer because F(x-1)<F(x)","failures":[]}
