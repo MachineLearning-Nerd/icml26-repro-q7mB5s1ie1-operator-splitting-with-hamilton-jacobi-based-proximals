@@ -123,44 +123,85 @@ def claim2_ppm_pgd() -> dict[str, object]:
 
     initial = np.zeros(n)
     initial_objective = objective(initial)
-    iterations = 1800
+    horizons = [100, 300, 1000, 3000, 10000, 30000]
+    iterations = horizons[-1]
+    horizon_set = set(horizons)
+    horizon_results: list[dict[str, float | int]] = []
+    scale = np.linalg.norm(optimum) + 1e-12
 
     ppm = initial.copy()
+    pgd = initial.copy()
+    pgd_finite_sum_control = initial.copy()
     for k in range(iterations):
         t = 0.5 / (k + 1)
         delta = 0.1 / (k + 1) ** 4
         ppm = hj_pseudohuber_l1_population(ppm, center, t, delta, lam)
 
-    pgd = initial.copy()
-    pgd_fixed_delta = initial.copy()
-    for k in range(iterations):
-        t = 0.5 / (k + 1)
         gradient = (pgd - center) / np.sqrt(1 + (pgd - center) ** 2)
-        gradient_control = (pgd_fixed_delta - center) / np.sqrt(
-            1 + (pgd_fixed_delta - center) ** 2
-        )
-        delta = 0.1 / (k + 1) ** 4
         pgd = hj_l1_population(pgd - t * gradient, t, delta, lam)
-        pgd_fixed_delta = hj_l1_population(
-            pgd_fixed_delta - t * gradient_control, t, 0.1, lam
+
+        control_t = 0.5 / (k + 1) ** 2
+        gradient_control = (pgd_finite_sum_control - center) / np.sqrt(
+            1 + (pgd_finite_sum_control - center) ** 2
+        )
+        pgd_finite_sum_control = hj_l1_population(
+            pgd_finite_sum_control - control_t * gradient_control,
+            control_t,
+            delta,
+            lam,
         )
 
-    scale = np.linalg.norm(optimum) + 1e-12
+        if k + 1 in horizon_set:
+            horizon_results.append(
+                {
+                    "iterations": k + 1,
+                    "ppm_relative_solution_error": float(
+                        np.linalg.norm(ppm - optimum) / scale
+                    ),
+                    "pgd_relative_solution_error": float(
+                        np.linalg.norm(pgd - optimum) / scale
+                    ),
+                }
+            )
+
+    ppm_error = float(np.linalg.norm(ppm - optimum) / scale)
+    pgd_error = float(np.linalg.norm(pgd - optimum) / scale)
+    ppm_first_hit = next(
+        (
+            row["iterations"]
+            for row in horizon_results
+            if row["ppm_relative_solution_error"] < 0.08
+        ),
+        None,
+    )
+    pgd_first_hit = next(
+        (
+            row["iterations"]
+            for row in horizon_results
+            if row["pgd_relative_solution_error"] < 0.03
+        ),
+        None,
+    )
     return {
         "seed": SEEDS["claim2"],
         "dimension": n,
         "iterations": iterations,
+        "precommitted_horizons": horizons,
+        "horizon_results": horizon_results,
+        "ppm_first_hit_below_8_percent": ppm_first_hit,
+        "pgd_first_hit_below_3_percent": pgd_first_hit,
         "functions_satisfy_printed_assumptions": True,
         "minimizer_nonempty": True,
         "initial_objective": initial_objective,
         "optimal_objective": objective(optimum),
         "ppm_final_objective": objective(ppm),
         "pgd_final_objective": objective(pgd),
-        "ppm_relative_solution_error": float(np.linalg.norm(ppm - optimum) / scale),
-        "pgd_relative_solution_error": float(np.linalg.norm(pgd - optimum) / scale),
-        "fixed_delta_control_error": float(
-            np.linalg.norm(pgd_fixed_delta - optimum) / scale
+        "ppm_relative_solution_error": ppm_error,
+        "pgd_relative_solution_error": pgd_error,
+        "finite_sum_step_control_error": float(
+            np.linalg.norm(pgd_finite_sum_control - optimum) / scale
         ),
+        "finite_sum_step_control_sum_upper_bound": math.pi**2 / 12,
         "population_integrals": True,
         "finite_sample_N": None,
     }

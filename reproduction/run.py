@@ -50,6 +50,7 @@ def main() -> int:
         "estimated_cores": 4,
         "selected_compute": "huggingface",
         "selected_flavor": "cpu-upgrade",
+        "container_image": "ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim",
         "actual_cpu_allocation": cpu_allocation(),
         "process_max_threads": "uncapped within cpu-upgrade allocation",
         "git_sha": git_sha(),

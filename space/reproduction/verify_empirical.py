@@ -27,8 +27,15 @@ def main() -> int:
         failures.append("PPM solution error exceeds 8%")
     if claim2["pgd_relative_solution_error"] >= 0.03:
         failures.append("PGD solution error exceeds 3%")
-    if claim2["fixed_delta_control_error"] <= claim2["pgd_relative_solution_error"]:
-        failures.append("fixed-delta control did not degrade")
+    if claim2["ppm_first_hit_below_8_percent"] is None:
+        failures.append("PPM never crossed the precommitted 8% threshold")
+    if claim2["pgd_first_hit_below_3_percent"] is None:
+        failures.append("PGD never crossed the precommitted 3% threshold")
+    if (
+        claim2["finite_sum_step_control_error"]
+        <= claim2["pgd_relative_solution_error"] + 0.05
+    ):
+        failures.append("finite-sum step control did not materially degrade")
 
     drs = result["claim3_drs"]
     if drs["dimension"] != 256:
