@@ -1,0 +1,760 @@
+{
+  "claim1_checker": {
+    "claim": 1,
+    "failures": [],
+    "proof_obligations": 11,
+    "status": "VERIFIED"
+  },
+  "claim1_negative_control": {
+    "claim": 1,
+    "failures": [
+      "summed IBP dimension coefficient must be n"
+    ],
+    "proof_obligations": 11,
+    "status": "REJECTED"
+  },
+  "claim2_checker": {
+    "assumptions_satisfied": true,
+    "claim": 2,
+    "counterexample": "F(x)=x has no minimizer because F(x-1)<F(x)",
+    "failures": [],
+    "status": "FALSIFIED"
+  },
+  "claim2_negative_control": {
+    "assumptions_satisfied": false,
+    "claim": 2,
+    "counterexample": "F(x)=x has no minimizer because F(x-1)<F(x)",
+    "failures": [
+      "quadratic is not globally Lipschitz"
+    ],
+    "status": "REJECTED"
+  },
+  "claim3_checker": {
+    "assumptions_satisfied": true,
+    "claim": 3,
+    "counterexample": "F(x)=x has no minimizer because F(x-1)<F(x)",
+    "failures": [],
+    "status": "FALSIFIED"
+  },
+  "claim3_negative_control": {
+    "assumptions_satisfied": false,
+    "claim": 3,
+    "counterexample": "F(x)=x has no minimizer because F(x-1)<F(x)",
+    "failures": [
+      "DYS step condition 0<t<2/L' fails"
+    ],
+    "status": "REJECTED"
+  },
+  "claim4_checker": {
+    "assumptions_satisfied": true,
+    "claim": 4,
+    "counterexample": "F(x)=x has no minimizer because F(x-1)<F(x)",
+    "failures": [],
+    "status": "FALSIFIED"
+  },
+  "claim4_negative_control": {
+    "assumptions_satisfied": false,
+    "claim": 4,
+    "counterexample": "F(x)=x has no minimizer because F(x-1)<F(x)",
+    "failures": [
+      "PDHG condition tau*sigma*||A||^2<1 fails"
+    ],
+    "status": "REJECTED"
+  },
+  "claim5_checker": {
+    "checks": 18,
+    "claim": 5,
+    "empirical_hierarchy_observed": true,
+    "failures": [],
+    "status": "FALSIFIED"
+  },
+  "claim5_raw": {
+    "bound_counterexample": {
+      "J_f_plus_J_g": 14.7781121978613,
+      "J_f_plus_g": 1.0,
+      "aligned_negative_control": {
+        "J_f_plus_J_g": 14.7781121978613,
+        "J_f_plus_g": 2980.9579870417283,
+        "f": "abs(x)",
+        "g": "abs(x)",
+        "minimal_L_f_plus_g": 2.0,
+        "split_bound_is_tighter": true
+      },
+      "counterexample_contradicts_broad_tighter_bound_statement": true,
+      "delta": 0.1,
+      "domain": "R",
+      "f": "f(x)=x",
+      "f_is_convex": true,
+      "g": "g(x)=-x",
+      "g_is_convex": true,
+      "minimal_L_f": 1.0,
+      "minimal_L_f_plus_g": 0.0,
+      "minimal_L_g": 1.0,
+      "split_bound_is_tighter": false,
+      "t": 0.1
+    },
+    "claim": 5,
+    "h6_corrected_hierarchy": {
+      "bootstrap_95_percent_log_ratio_interval": [
+        -1.4015152577972776,
+        -1.3571478994613155
+      ],
+      "deviation": "correct population HJ operators replace the paper source's non-normalized projection estimator; 2000 approximate iterations replace the paper's 10000",
+      "finite_sample_N": null,
+      "fixed_delta": 0.1,
+      "geometric_mean_hybrid_to_full_residual_ratio": 0.251737029870476,
+      "hybrid_outperforms_fully_approximate": true,
+      "identical_arms_negative_control_declares_hierarchy": false,
+      "paper_scale": "250 observations x 500 variables, 50 positive nonzeros",
+      "population_hj_used": true,
+      "rows": [
+        {
+          "approximate_iterations": 2000,
+          "delta": 0.1,
+          "dimension": 500,
+          "exact_objective": 109.37104913768815,
+          "exact_reference_iterations": 10000,
+          "exact_trace": [
+            {
+              "analytical_fixed_point_residual": 0.09253907792442662,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.08702797726079085,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.0497356779414198,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.0112087383298197,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.004880833384840587,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.002381065515848177,
+              "iterations": 2000
+            }
+          ],
+          "fully_approximate_analytical_fixed_point_residual": 0.03459058482782302,
+          "fully_approximate_objective": 117.87110548237816,
+          "fully_approximate_trace": [
+            {
+              "analytical_fixed_point_residual": 0.11549308261059256,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.11318781629009601,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.07697224221379421,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.04076168068867835,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.03616095992061706,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.03459058482782302,
+              "iterations": 2000
+            }
+          ],
+          "hybrid_analytical_fixed_point_residual": 0.009042347174774807,
+          "hybrid_objective": 112.3853960021458,
+          "hybrid_to_full_residual_ratio": 0.2614106474285908,
+          "hybrid_trace": [
+            {
+              "analytical_fixed_point_residual": 0.09248919928042011,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.08691085528615727,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.05005442598190076,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.01368877327696394,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.009375656834856982,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.009042347174774807,
+              "iterations": 2000
+            }
+          ],
+          "lambda": 0.5,
+          "observations": 250,
+          "seed": 26051,
+          "step": 0.0025,
+          "true_nonzeros": 50
+        },
+        {
+          "approximate_iterations": 2000,
+          "delta": 0.1,
+          "dimension": 500,
+          "exact_objective": 107.02122303972814,
+          "exact_reference_iterations": 10000,
+          "exact_trace": [
+            {
+              "analytical_fixed_point_residual": 0.08667448779573565,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.081792823111011,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.04794266978053626,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.012011238813675013,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.005686854108508643,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.002580232608805734,
+              "iterations": 2000
+            }
+          ],
+          "fully_approximate_analytical_fixed_point_residual": 0.0372245874829512,
+          "fully_approximate_objective": 115.54392699651005,
+          "fully_approximate_trace": [
+            {
+              "analytical_fixed_point_residual": 0.11464978502563641,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.11404938651005599,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.08228126169078578,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.04615784230054562,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.03995195486187305,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.0372245874829512,
+              "iterations": 2000
+            }
+          ],
+          "hybrid_analytical_fixed_point_residual": 0.009005909605485916,
+          "hybrid_objective": 109.97844271380177,
+          "hybrid_to_full_residual_ratio": 0.24193443673783108,
+          "hybrid_trace": [
+            {
+              "analytical_fixed_point_residual": 0.08663280747778315,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.08172094446215951,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.04818933378960742,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.013886745170198025,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.009870387995710475,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.009005909605485916,
+              "iterations": 2000
+            }
+          ],
+          "lambda": 0.5,
+          "observations": 250,
+          "seed": 26052,
+          "step": 0.0025,
+          "true_nonzeros": 50
+        },
+        {
+          "approximate_iterations": 2000,
+          "delta": 0.1,
+          "dimension": 500,
+          "exact_objective": 105.6070243265303,
+          "exact_reference_iterations": 10000,
+          "exact_trace": [
+            {
+              "analytical_fixed_point_residual": 0.08526240434547283,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.08053923419747035,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.04812807704658762,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.012498301022686948,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.005676475673881181,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.0025330043705703038,
+              "iterations": 2000
+            }
+          ],
+          "fully_approximate_analytical_fixed_point_residual": 0.03654378242662547,
+          "fully_approximate_objective": 114.22839789427455,
+          "fully_approximate_trace": [
+            {
+              "analytical_fixed_point_residual": 0.108962371126923,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.10800375738759135,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.0777844707641941,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.044318449230417126,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.03843906805151001,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.03654378242662547,
+              "iterations": 2000
+            }
+          ],
+          "hybrid_analytical_fixed_point_residual": 0.009140560691730696,
+          "hybrid_objective": 108.54828047324622,
+          "hybrid_to_full_residual_ratio": 0.25012628920073054,
+          "hybrid_trace": [
+            {
+              "analytical_fixed_point_residual": 0.08524897087567615,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.08051066847136268,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.04834077250917566,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.014397611624360516,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.010020803616804505,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.009140560691730696,
+              "iterations": 2000
+            }
+          ],
+          "lambda": 0.5,
+          "observations": 250,
+          "seed": 26053,
+          "step": 0.0025,
+          "true_nonzeros": 50
+        },
+        {
+          "approximate_iterations": 2000,
+          "delta": 0.1,
+          "dimension": 500,
+          "exact_objective": 104.3849613116854,
+          "exact_reference_iterations": 10000,
+          "exact_trace": [
+            {
+              "analytical_fixed_point_residual": 0.08683649128164395,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.08233567764728177,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.05052070238184562,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.013283540283247566,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.005746502423963074,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.0022281716882893298,
+              "iterations": 2000
+            }
+          ],
+          "fully_approximate_analytical_fixed_point_residual": 0.037076515443633065,
+          "fully_approximate_objective": 112.0754978279796,
+          "fully_approximate_trace": [
+            {
+              "analytical_fixed_point_residual": 0.11380245317403993,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.1119411057061018,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.08210603857995985,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.04499090357336988,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.03883889940108571,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.037076515443633065,
+              "iterations": 2000
+            }
+          ],
+          "hybrid_analytical_fixed_point_residual": 0.009485885628673526,
+          "hybrid_objective": 106.03505897469995,
+          "hybrid_to_full_residual_ratio": 0.25584620116458334,
+          "hybrid_trace": [
+            {
+              "analytical_fixed_point_residual": 0.08681239320005987,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.0822721823023981,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.05073222336144651,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.015245105472004552,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.010167025220187144,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.009485885628673526,
+              "iterations": 2000
+            }
+          ],
+          "lambda": 0.5,
+          "observations": 250,
+          "seed": 26054,
+          "step": 0.0025,
+          "true_nonzeros": 50
+        },
+        {
+          "approximate_iterations": 2000,
+          "delta": 0.1,
+          "dimension": 500,
+          "exact_objective": 107.52990360594916,
+          "exact_reference_iterations": 10000,
+          "exact_trace": [
+            {
+              "analytical_fixed_point_residual": 0.08732117894721896,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.0826025492377902,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.04980905832322033,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.013134182760878615,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.005854227367380907,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.0023926957927146216,
+              "iterations": 2000
+            }
+          ],
+          "fully_approximate_analytical_fixed_point_residual": 0.038064796583968774,
+          "fully_approximate_objective": 115.4509037468188,
+          "fully_approximate_trace": [
+            {
+              "analytical_fixed_point_residual": 0.11584658833898905,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.11403657609713161,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.0836671402999103,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.048004910496651065,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.04087843709684775,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.038064796583968774,
+              "iterations": 2000
+            }
+          ],
+          "hybrid_analytical_fixed_point_residual": 0.009508231716555378,
+          "hybrid_objective": 109.52846977744181,
+          "hybrid_to_full_residual_ratio": 0.2497906877180011,
+          "hybrid_trace": [
+            {
+              "analytical_fixed_point_residual": 0.08729433281058593,
+              "iterations": 1
+            },
+            {
+              "analytical_fixed_point_residual": 0.08253106360002474,
+              "iterations": 10
+            },
+            {
+              "analytical_fixed_point_residual": 0.050019417924132455,
+              "iterations": 100
+            },
+            {
+              "analytical_fixed_point_residual": 0.015001710173929678,
+              "iterations": 500
+            },
+            {
+              "analytical_fixed_point_residual": 0.010095821705584441,
+              "iterations": 1000
+            },
+            {
+              "analytical_fixed_point_residual": 0.009508231716555378,
+              "iterations": 2000
+            }
+          ],
+          "lambda": 0.5,
+          "observations": 250,
+          "seed": 26055,
+          "step": 0.0025,
+          "true_nonzeros": 50
+        }
+      ]
+    },
+    "lipschitz_applicability_audit": {
+      "conclusion": "No finite full-objective J constant exists under Theorem 3.3 for H.6, so a numerical finite Lipschitz reduction there would be invalid.",
+      "l1_component_L": 11.180339887498949,
+      "nonnegative_indicator_real_valued_lipschitz": false,
+      "quadratic_loss_globally_lipschitz": false,
+      "section_3_3_J_bound_applies_to_full_h6_objective": false
+    },
+    "runtime_seconds": 5.364254170000095,
+    "source_projection_audit": {
+      "audit_point": "one dimension, z=0",
+      "reason": "source divides feasible numerator by N instead of feasible mass",
+      "source_estimator_expectation": 0.006307831305050401,
+      "source_estimator_is_hj_prox": false,
+      "source_file": "dys_constrained_lasso.ipynb",
+      "source_repository_commit": "895067559f4786c471a763811d949b3ae1f7377b",
+      "source_to_true_ratio": 0.5000000000000001,
+      "true_hj_nonnegative_value": 0.0126156626101008
+    },
+    "verdict": "FALSIFIED"
+  },
+  "empirical_checker": {
+    "checks": 16,
+    "failures": [],
+    "status": "CORROBORATED"
+  },
+  "empirical_raw": {
+    "claim2": {
+      "dimension": 500,
+      "finite_sample_N": null,
+      "finite_sum_step_control_error": 0.6330733910387591,
+      "finite_sum_step_control_sum_upper_bound": 0.8224670334241132,
+      "functions_satisfy_printed_assumptions": true,
+      "horizon_results": [
+        {
+          "iterations": 100,
+          "pgd_relative_solution_error": 0.20176837314148893,
+          "ppm_relative_solution_error": 0.21374477206714682
+        },
+        {
+          "iterations": 300,
+          "pgd_relative_solution_error": 0.13359301398335421,
+          "ppm_relative_solution_error": 0.14123286939944388
+        },
+        {
+          "iterations": 1000,
+          "pgd_relative_solution_error": 0.08234699836343584,
+          "ppm_relative_solution_error": 0.08687951830286264
+        },
+        {
+          "iterations": 3000,
+          "pgd_relative_solution_error": 0.05165169257224979,
+          "ppm_relative_solution_error": 0.05442221339348807
+        },
+        {
+          "iterations": 10000,
+          "pgd_relative_solution_error": 0.03034209659734576,
+          "ppm_relative_solution_error": 0.03194075980530916
+        },
+        {
+          "iterations": 30000,
+          "pgd_relative_solution_error": 0.018434576121118797,
+          "ppm_relative_solution_error": 0.019396697377718337
+        }
+      ],
+      "initial_objective": 176.2104380828894,
+      "iterations": 30000,
+      "minimizer_nonempty": true,
+      "optimal_objective": 70.3994995908293,
+      "pgd_final_objective": 70.45473075414107,
+      "pgd_first_hit_below_3_percent": 30000,
+      "pgd_relative_solution_error": 0.018434576121118797,
+      "population_integrals": true,
+      "ppm_final_objective": 70.46067442095139,
+      "ppm_first_hit_below_8_percent": 3000,
+      "ppm_relative_solution_error": 0.019396697377718337,
+      "precommitted_horizons": [
+        100,
+        300,
+        1000,
+        3000,
+        10000,
+        30000
+      ],
+      "seed": 26012
+    },
+    "claim3_drs": {
+      "dimension": 256,
+      "final_objective": 6.0759304539553565,
+      "function_evaluations": 1843200,
+      "initial_objective": 14.109819881041801,
+      "iterations": 1800,
+      "median_ess": 1.2909040168970305,
+      "paper_scale_matches_trend_dimension": true,
+      "quadratic_data_term_deviates_from_global_lipschitz_assumption": true,
+      "reference_correlation": 0.9489455359877971,
+      "reference_objective": 1.7157282532649187,
+      "relative_solution_error": 0.33152401602732967,
+      "samples_per_hj_call": 1024,
+      "seed": 26013
+    },
+    "claim3_dys": {
+      "analytic_fixed_point_residual": 0.0030967924883848964,
+      "dimension": 60,
+      "final_objective": 0.9249464769069782,
+      "function_evaluations": 614400,
+      "groups": 6,
+      "initial_objective": 5.26560326691105,
+      "invalid_step_control_rejected": true,
+      "invalid_step_control_tL": 2.5,
+      "iterations": 600,
+      "median_ess": 956.0964586054665,
+      "observations": 300,
+      "reference_correlation": 0.9989803875464758,
+      "reference_objective": 0.9151523488809341,
+      "reference_state_norm": 2.9437582252388697,
+      "relative_solution_error": 0.045172068961356344,
+      "samples_per_hj_call": 1024,
+      "seed": 26014,
+      "smooth_h_is_globally_lipschitz": true,
+      "smooth_h_is_nonzero": true,
+      "valid_step_product": 0.35
+    },
+    "claim4": {
+      "dimension": 500,
+      "dual_function": "g*(y)=0.5||y||^2+<b,y>",
+      "dual_hj_population_update": "(v-sigma*b)/(1+sigma)",
+      "final_objective": 1.4318816857594494,
+      "initial_objective": 8.149446575104367,
+      "invalid_step_control_product": 4.000000000000001,
+      "invalid_step_control_rejected": true,
+      "iterations": 1200,
+      "observations": 250,
+      "primal_hj_population_update": "tilted-truncated-Gaussian l1 mean",
+      "reference_correlation": 0.9999999999225363,
+      "reference_objective": 1.431878769194947,
+      "relative_solution_error": 1.2581440779780987e-05,
+      "seed": 26015,
+      "valid_step_product": 0.25000000000000006
+    },
+    "protocol": "independent finite corroboration; exact theorem verdicts are separate",
+    "runtime_seconds": 46.54867875899981,
+    "seeds": {
+      "claim2": 26012,
+      "drs": 26013,
+      "dys": 26014,
+      "pdhg": 26015
+    }
+  },
+  "final_summary": {
+    "claim_1": "VERIFIED",
+    "claim_2": "FALSIFIED",
+    "claim_3": "FALSIFIED",
+    "claim_4": "FALSIFIED",
+    "claim_5": "FALSIFIED",
+    "claims_2_4_intended_interpretation": "CORROBORATED",
+    "control": "EXPECTED_FAILURE",
+    "runtime_seconds": 53.746125
+  },
+  "run_id": "108d9cac-f2d1-469e-8371-3381a2849645",
+  "run_metadata": {
+    "actual_cpu_allocation": 64,
+    "container_image": "ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim",
+    "estimated_cores": 8,
+    "fixed_command": "uv run --frozen python -m reproduction.run",
+    "git_sha": "1e6c16b3bc08dda235b956e09b26dfcde944c4da",
+    "platform": "Linux-6.12.94-123.192.amzn2023.x86_64-x86_64-with-glibc2.41",
+    "process_max_threads": "uncapped within cpu-upgrade allocation",
+    "python": "3.12.13",
+    "seed": null,
+    "selected_compute": "huggingface",
+    "selected_flavor": "cpu-upgrade"
+  }
+}

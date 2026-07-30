@@ -6,7 +6,8 @@
 | 2 | Current Claim 2 | yes | yes | yes | yes | yes | yes | FALSIFIED |
 | 3 | Current Claim 3 | yes | yes | yes | yes | yes | yes | FALSIFIED |
 | 4 | Current Claim 4 | yes | yes | yes | yes | yes | yes | FALSIFIED |
-| 5 | pending | no | no | no | no | no | no | BLOCKED |
+| 5 | Current Claim 5 | yes | yes | yes | yes | yes | yes | FALSIFIED |
 
-This is a baseline candidate, not release-ready. Publication remains blocked
-until every cell is complete and the evaluator-blind review passes.
+All rows are complete. The publication gate still requires the cumulative
+candidate rerun, manifest/subset checks, secret scan, and evaluator-blind
+review.

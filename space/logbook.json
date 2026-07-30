@@ -8,7 +8,7 @@
     "icml2026-repro",
     "paper-q7mB5s1ie1"
   ],
-  "updated_at": "2026-07-30T12:00:00+00:00",
+  "updated_at": "2026-07-30T18:00:00+00:00",
   "root": {
     "slug": "index",
     "title": "Current reproduction",
@@ -39,9 +39,27 @@
         "children": []
       },
       {
+        "slug": "current-claim-5",
+        "title": "Current Claim 5 — falsified",
+        "file": "pages/current-claim-5/page.md",
+        "children": []
+      },
+      {
+        "slug": "illustrated-report",
+        "title": "Illustrated claim-by-claim report",
+        "file": "reports/reproduction/report.md",
+        "children": []
+      },
+      {
         "slug": "visibility",
         "title": "Candidate visibility matrix",
         "file": "pages/visibility/page.md",
+        "children": []
+      },
+      {
+        "slug": "release-report",
+        "title": "Release forecast and evidence gate",
+        "file": "pages/release-report/page.md",
         "children": []
       },
       {
@@ -84,5 +102,5 @@
     ]
   },
   "agent_view_tokens": 5000,
-  "revision": "candidate-baseline"
+  "revision": "cumulative-release-candidate"
 }

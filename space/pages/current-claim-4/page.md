@@ -19,6 +19,16 @@ This directly audits the conjugate mechanism missing from the historical
 LASSO proxy. The negative control sets `A=1` and `tau=sigma=2`; the checker
 rejects its step product of 4.
 
+## Corrected-interpretation corroboration
+
+The paper-scale run used 250 observations and 500 variables. Its dual
+HJ-population update is explicitly
+`prox^delta_(sigma g*)(v)=(v-sigma b)/(1+sigma)` for
+`g*(y)=0.5||y||²+<b,y>`, followed by an HJ l1 primal update. The result reached
+reference correlation **0.9999999999** and relative solution error
+**1.258e-5**. The valid step product was 0.25; the product-4 control was
+rejected.
+
 ## Reproduce and inspect
 
 - [Contract](../../evidence/claim4/claim_contract.json)
@@ -29,3 +39,6 @@ rejects its step product of 4.
 - [Step-product control](../../evidence/claim4/negative_control.json)
 - [Control output](../../evidence/claim4/negative_control_output.json)
 - [Limitations](../../evidence/claim4/limitations.md)
+- [Raw PDHG result and checker output](../../evidence/cumulative/run_108d9cac.json)
+- [Executed PDHG source](../../reproduction/empirical.py)
+- [Paper-scale independent checker](../../reproduction/verify_empirical.py)

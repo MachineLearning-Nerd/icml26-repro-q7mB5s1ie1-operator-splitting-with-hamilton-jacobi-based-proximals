@@ -39,6 +39,12 @@ that replaces the `n` coordinate contributions with `n−1` is rejected.
 - [Negative-control certificate](../../evidence/claim1/negative_control_certificate.json)
 - [Negative-control output](../../evidence/claim1/negative_control_output.json)
 - [Limitations](../../evidence/claim1/limitations.md)
+- [Passing cumulative raw run](../../evidence/cumulative/run_108d9cac.json)
+
+The cumulative run used commit
+`1e6c16b3bc08dda235b956e09b26dfcde944c4da`, Hugging Face
+`cpu-upgrade`, 64-CPU process affinity, and the pinned uv/Python 3.12 image.
+The checker again returned VERIFIED and the mutation returned REJECTED.
 
 This page supersedes the old one-dimensional verification. The prior material
 remains reachable under **Historical rejected baseline** and is not the current

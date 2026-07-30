@@ -22,6 +22,15 @@ a universal theorem; it is not described as full-scale empirical evidence.
 The negative control changes `t` to 3 and is rejected because
 `0<t<2/L'` no longer holds.
 
+## Corrected-interpretation corroboration
+
+Actual DRS at the paper's trend-filtering dimension `n=256` improved the
+objective from 14.1098 to 6.07593 and reached reference correlation 0.94895.
+Its 33.15% relative solution error and median ESS 1.29 are material
+limitations. Actual Davis–Yin at 300×60 included a nonzero globally Lipschitz
+smooth term, reached reference correlation 0.99898, and had exact-map
+fixed-point residual 0.00310. The invalid `tL=2.5` control was rejected.
+
 ## Reproduce and inspect
 
 - [Contract](../../evidence/claim3/claim_contract.json)
@@ -32,3 +41,6 @@ The negative control changes `t` to 3 and is rejected because
 - [Step-violating control](../../evidence/claim3/negative_control.json)
 - [Control output](../../evidence/claim3/negative_control_output.json)
 - [Limitations](../../evidence/claim3/limitations.md)
+- [Raw DRS/DYS traces and checker output](../../evidence/cumulative/run_108d9cac.json)
+- [Executed DRS/DYS source](../../reproduction/empirical.py)
+- [Paper-scale independent checker](../../reproduction/verify_empirical.py)

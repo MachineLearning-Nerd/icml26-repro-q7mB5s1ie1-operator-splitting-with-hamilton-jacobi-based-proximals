@@ -20,5 +20,6 @@ Current verification is first in `pages/index.md`. The exact judged revision
 rejected baseline**. Claim 1 is VERIFIED by a machine-replayed symbolic
 derivation. Claims 2–4 are FALSIFIED as printed by assumption-satisfying
 no-minimizer constructions, while separate paper-scale experiments test the
-intended corrected interpretation. Claim 5 remains BLOCKED, so this candidate
-is not release-ready.
+intended corrected interpretation. Claim 5 is FALSIFIED by an exact
+Lipschitz-constant counterexample; a corrected H.6 experiment independently
+supports the narrower hybrid advantage.

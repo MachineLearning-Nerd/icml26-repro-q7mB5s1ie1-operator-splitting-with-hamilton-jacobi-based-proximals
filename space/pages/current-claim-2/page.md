@@ -24,6 +24,15 @@ The paper's proof appears to intend the nonempty fixed-point condition from
 Theorem 3.1. If treated as implicit, this result is a missing-hypothesis
 diagnosis; a separate paper-scale route tests that corrected interpretation.
 
+## Corrected-interpretation corroboration
+
+At dimension 500, population-HJ PPM and PGD reached relative solution errors
+of **0.019397** and **0.018435**. A precommitted horizon sweep found PPM's 8%
+first hit at 3,000 iterations and PGD's 3% first hit at 30,000. The
+finite-sum-step control, which violates `sum t_k=infinity`, stayed at
+**0.633073** error. This finite run corroborates the likely corrected theorem;
+it is not the basis of the universal verdict.
+
 ## Reproduce and inspect
 
 - Fixed command: `uv run --frozen python -m reproduction.run`
@@ -35,3 +44,6 @@ diagnosis; a separate paper-scale route tests that corrected interpretation.
 - [Lipschitz-violating control](../../evidence/claim2/negative_control.json)
 - [Control output](../../evidence/claim2/negative_control_output.json)
 - [Limitations](../../evidence/claim2/limitations.md)
+- [Raw paper-scale traces and checker output](../../evidence/cumulative/run_108d9cac.json)
+- [Paper-scale source](../../reproduction/empirical.py)
+- [Paper-scale independent checker](../../reproduction/verify_empirical.py)
