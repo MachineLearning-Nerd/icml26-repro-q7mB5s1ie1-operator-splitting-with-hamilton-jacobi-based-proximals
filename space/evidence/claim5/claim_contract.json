@@ -1,0 +1,34 @@
+{
+  "claim": 5,
+  "source": {
+    "url": "https://arxiv.org/html/2601.22370v4",
+    "retrieved_utc_date": "2026-07-30",
+    "sha256": "8e673443dd09f2952988fb9348c43f2b52d78442665d7b764e01586a8a7c5205",
+    "anchors": [
+      "S3.SS3.p2.4",
+      "S4.SS3.p3.3",
+      "S4.SS3.p4.1",
+      "A8.SS6"
+    ]
+  },
+  "exact_statements_tested": [
+    "The split total J_f+J_g substantially reduces J_{f+g} and yields a tighter theoretical Monte Carlo bound.",
+    "In matched nonnegative LASSO, hybrid DYS-HJ-1 significantly outperforms fully approximate DYS-HJ-2."
+  ],
+  "analytical_contract": {
+    "assumptions": [
+      "f and g are convex and globally Lipschitz",
+      "t>0",
+      "delta>0"
+    ],
+    "pass": "J_f+J_g < J_{f+g}",
+    "falsify": "An assumption-satisfying pair has J_f+J_g > J_{f+g}"
+  },
+  "empirical_contract": {
+    "scale": "250 observations x 500 variables with 50 positive nonzeros",
+    "matched_parameters": "same data, step, delta, horizon, and analytical residual",
+    "uncertainty": "five paired data seeds and 10000 paired bootstrap resamples",
+    "assessment": "aligned only if the 95% paired log-residual-ratio interval is below zero"
+  },
+  "verdict_rule": "The broad theoretical claim is FALSIFIED by a valid counterexample regardless of whether the scoped H.6 hierarchy aligns."
+}

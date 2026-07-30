@@ -57,7 +57,7 @@ def main() -> int:
     started = time.perf_counter()
     metadata = {
         "fixed_command": "uv run --frozen python -m reproduction.run",
-        "estimated_cores": 4,
+        "estimated_cores": 8,
         "selected_compute": "huggingface",
         "selected_flavor": "cpu-upgrade",
         "container_image": "ghcr.io/astral-sh/uv:0.11.32-python3.12-trixie-slim",
@@ -114,8 +114,26 @@ def main() -> int:
         print(empirical_check.stderr, file=sys.stderr)
         return 1
 
+    from reproduction.claim5 import write_result as write_claim5_result
+
+    claim5_path = Path(tempfile.gettempdir()) / "hj_prox_claim5.json"
+    claim5_result = write_claim5_result(claim5_path)
+    print("CLAIM5_RAW " + json.dumps(claim5_result, sort_keys=True))
+    claim5_check = subprocess.run(
+        [sys.executable, "-m", "reproduction.verify_claim5", str(claim5_path)],
+        cwd=ROOT,
+        capture_output=True,
+        check=False,
+        text=True,
+    )
+    print("CLAIM5_CHECKER " + claim5_check.stdout.strip())
+    if claim5_check.returncode != 0:
+        print(claim5_check.stderr, file=sys.stderr)
+        return 1
+
     summary = {
         **claim_statuses,
+        "claim_5": "FALSIFIED",
         "claims_2_4_intended_interpretation": "CORROBORATED",
         "control": "EXPECTED_FAILURE",
         "runtime_seconds": round(time.perf_counter() - started, 6),
