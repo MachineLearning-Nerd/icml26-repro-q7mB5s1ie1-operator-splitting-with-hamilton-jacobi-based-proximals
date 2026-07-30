@@ -61,8 +61,9 @@ preserved either in the historical copy or at its unchanged root asset path.
 Current verification is first in navigation; old pages are labeled
 **Historical rejected baseline**.
 
-Publication will use a SHA-256-checked, secret-scanned text-file allowlist to
-commit only to the existing `DineshAI/q7mB5s1ie1` Space. After publication,
-the exact revision will be downloaded, hashes and canonical traversal will be
-rechecked, and the same public text paths will be mirrored to GitHub `main`.
-The paper will then be reported as awaiting the live judge.
+Publication used a SHA-256-checked, secret-scanned text-file allowlist and
+committed only to the existing `DineshAI/q7mB5s1ie1` Space. The published
+revision was downloaded, its hashes and canonical traversal were rechecked,
+and the same public text paths were mirrored to GitHub `main`.
+
+Status: **published; awaiting the live judge**.

@@ -3,6 +3,8 @@
 Current verification is presented first. The exact judged 5/10 baseline remains
 reachable under **Historical rejected baseline**.
 
+Publication status: **awaiting the live judge**. No score increase is claimed.
+
 ## Current status
 
 | Claim | Status | Current evidence |

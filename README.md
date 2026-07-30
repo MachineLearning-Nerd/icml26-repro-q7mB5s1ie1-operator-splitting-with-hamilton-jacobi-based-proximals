@@ -9,6 +9,9 @@ experiments. The current live judge score remains **5/10**. A best-case
 **10/10 is only a forecast** until the evaluator reviews the new Hugging Face
 revision.
 
+Publication status: **awaiting the live judge**. The current recorded score
+remains 5/10.
+
 ## Results
 
 | Claim | Paper claim tested | Observed evidence | Assessment | Paper versus observed |
