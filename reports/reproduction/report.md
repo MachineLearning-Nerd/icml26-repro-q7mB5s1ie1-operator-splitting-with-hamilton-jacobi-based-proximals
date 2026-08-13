@@ -155,11 +155,11 @@ The raw cumulative JSON, exact seeds, full traces, checkers, contracts,
 controls, source audit, and limitations are mirrored in the evaluator-visible
 Space candidate. The experiment lineage is:
 
-- [frozen Claim 1 baseline](https://github.com/MachineLearning-Nerd/icml26-repro-q7mB5s1ie1-operator-splitting-with-hamilton-jacobi-based-proximals/tree/orx/frozen-baseline-theorem-calibrated-claim-1)
-- [exact Claims 2–4 counterexamples](https://github.com/MachineLearning-Nerd/icml26-repro-q7mB5s1ie1-operator-splitting-with-hamilton-jacobi-based-proximals/tree/orx/exact-no-minimizer-counterexamples-for-claims-2)
-- [paper-scale intended-interpretation runs](https://github.com/MachineLearning-Nerd/icml26-repro-q7mB5s1ie1-operator-splitting-with-hamilton-jacobi-based-proximals/tree/orx/paper-scale-five-family-convergence-corroboratio)
-- [cumulative Claims 1–4 node](https://github.com/MachineLearning-Nerd/icml26-repro-q7mB5s1ie1-operator-splitting-with-hamilton-jacobi-based-proximals/tree/orx/cumulative-theorem-verdicts-and-paper-scale-corr)
-- [Claim 5 and cumulative winner](https://github.com/MachineLearning-Nerd/icml26-repro-q7mB5s1ie1-operator-splitting-with-hamilton-jacobi-based-proximals/tree/orx/claim-5-exact-bound-counterexample-and-matched-h)
+- [frozen Claim 1 baseline](https://github.com/MachineLearning-Nerd/icml26-operator-splitting-hamilton-jacobi-proximals/tree/audit/frozen-claim-1-baseline)
+- [exact Claims 2–4 counterexamples](https://github.com/MachineLearning-Nerd/icml26-operator-splitting-hamilton-jacobi-proximals/tree/audit/no-minimizer-counterexamples)
+- [paper-scale intended-interpretation runs](https://github.com/MachineLearning-Nerd/icml26-operator-splitting-hamilton-jacobi-proximals/tree/experiment/paper-scale-convergence)
+- [cumulative Claims 1–4 node](https://github.com/MachineLearning-Nerd/icml26-operator-splitting-hamilton-jacobi-proximals/tree/release/cumulative-theorem-verdicts)
+- [Claim 5 and cumulative winner](https://github.com/MachineLearning-Nerd/icml26-operator-splitting-hamilton-jacobi-proximals/tree/audit/claim-5-bound-and-hybrid)
 
 ## Assessment
 
