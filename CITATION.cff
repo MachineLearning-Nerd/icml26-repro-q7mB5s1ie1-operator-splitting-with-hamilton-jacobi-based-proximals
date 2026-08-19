@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this reproduction or its audit artifacts, please cite this repository and the original paper."
+type: software
+title: "Independent reproduction of Operator Splitting with Hamilton-Jacobi-based Proximals"
+version: "1.0.0"
+date-released: 2026-08-19
+authors:
+  - name: MachineLearning-Nerd
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-operator-splitting-hamilton-jacobi-proximals"
+url: "https://github.com/MachineLearning-Nerd/icml26-operator-splitting-hamilton-jacobi-proximals"
+abstract: "Scoped reproduction and claim audit of Operator Splitting with Hamilton-Jacobi-based Proximals, with one verified symbolic bound and four printed-claim falsifications bounded by explicit counterexamples."
+keywords:
+  - operator splitting
+  - Hamilton-Jacobi proximal
+  - convex optimization
+  - reproduction
+  - claim audit
+preferred-citation:
+  type: article
+  title: "Operator Splitting with Hamilton-Jacobi-based Proximals"
+  authors:
+    - family-names: Di
+      given-names: Nicholas
+    - family-names: Chi
+      given-names: Eric C.
+    - family-names: Wu Fung
+      given-names: Samy
+  year: 2026
+  url: "https://arxiv.org/abs/2601.22370"
+

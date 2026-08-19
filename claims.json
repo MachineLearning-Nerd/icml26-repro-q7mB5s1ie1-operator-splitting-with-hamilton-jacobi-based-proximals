@@ -1,0 +1,39 @@
+{
+  "schema_version": "1",
+  "paper": "Operator Splitting with Hamilton-Jacobi-based Proximals",
+  "paper_source": "arXiv:2601.22370v4",
+  "overall_status": "PARTIAL_CLAIM_1_VERIFIED_CLAIMS_2_TO_5_FALSIFIED_AS_PRINTED",
+  "claims": [
+    {
+      "id": "C1",
+      "status": "VERIFIED_SCOPED",
+      "evidence": "reproduction/verify_claim1.py",
+      "claim_page": "space/pages/current-claim-1/page.md"
+    },
+    {
+      "id": "C2",
+      "status": "FALSIFIED_AS_PRINTED",
+      "evidence": "reproduction/verify_claims234.py",
+      "claim_page": "space/pages/current-claim-2/page.md"
+    },
+    {
+      "id": "C3",
+      "status": "FALSIFIED_AS_PRINTED",
+      "evidence": "reproduction/verify_claims234.py",
+      "claim_page": "space/pages/current-claim-3/page.md"
+    },
+    {
+      "id": "C4",
+      "status": "FALSIFIED_AS_PRINTED",
+      "evidence": "reproduction/verify_claims234.py",
+      "claim_page": "space/pages/current-claim-4/page.md"
+    },
+    {
+      "id": "C5",
+      "status": "FALSIFIED_SCOPED",
+      "evidence": "reproduction/claim5.py",
+      "claim_page": "space/pages/current-claim-5/page.md"
+    }
+  ]
+}
+

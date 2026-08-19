@@ -29,6 +29,13 @@ counterexample. The paper's likely intended nonempty-solution interpretation
 is tested separately with finite experiments and is not confused with a proof
 of the universal theorems.
 
+Overall status: `PARTIAL_CLAIM_1_VERIFIED_CLAIMS_2_TO_5_FALSIFIED_AS_PRINTED`.
+This is a scoped v4 audit: Claims 2–4 diagnose the printed missing-minimizer
+hypothesis, while Claim 5 targets the broad split-bound comparison and reports
+the corrected H.6 hierarchy separately. `publication_allowed=false`,
+`score_claim=false`, and `official_author_endorsement=false` until an
+independent evaluator judges the public revision.
+
 | Release result | Meaning |
 | --- | --- |
 | Claim 1: **VERIFIED** | Eleven proof obligations pass and the `n→n-1` coefficient mutation is rejected. |
@@ -163,6 +170,10 @@ uv run --frozen marimo run notebooks/hj_prox_reproduction.py
   doi={10.48550/arXiv.2601.22370}
 }
 ```
+
+Machine-readable citation metadata is also available in
+[`CITATION.cff`](CITATION.cff), and the author note is kept separately in
+[`AUTHOR_THANK_YOU.md`](AUTHOR_THANK_YOU.md).
 
 ## Thank you
 

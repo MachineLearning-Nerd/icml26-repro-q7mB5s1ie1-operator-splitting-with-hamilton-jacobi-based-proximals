@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "repository": "MachineLearning-Nerd/icml26-operator-splitting-hamilton-jacobi-proximals",
+  "paper": "Operator Splitting with Hamilton-Jacobi-based Proximals",
+  "source_scope": "arXiv:2601.22370v4",
+  "overall_status": "PARTIAL_CLAIM_1_VERIFIED_CLAIMS_2_TO_5_FALSIFIED_AS_PRINTED",
+  "claim_statuses": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "FALSIFIED_AS_PRINTED",
+    "C3": "FALSIFIED_AS_PRINTED",
+    "C4": "FALSIFIED_AS_PRINTED",
+    "C5": "FALSIFIED_SCOPED"
+  },
+  "current_score_claim": false,
+  "publication_allowed": false,
+  "official_author_endorsement": false,
+  "canonical_identity": {
+    "name": "MachineLearning-Nerd",
+    "email": "MachineLearning-Nerd@users.noreply.github.com"
+  },
+  "recovery_bundle_sha256": "5abd31181b950cfc1f47af1d6092421f3ae3a9fd04edd4a549053063eb731195",
+  "notes": [
+    "Claims 2-4 are falsified as printed by exact no-minimizer counterexamples.",
+    "Claim 5 broad split-bound comparison is falsified; corrected H.6 is separate.",
+    "Finite intended-interpretation experiments do not prove universal convergence."
+  ]
+}
+

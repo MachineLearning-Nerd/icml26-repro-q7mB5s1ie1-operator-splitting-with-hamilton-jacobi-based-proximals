@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "overall_status": "PARTIAL_CLAIM_1_VERIFIED_CLAIMS_2_TO_5_FALSIFIED_AS_PRINTED",
+  "source_scope": "arXiv:2601.22370v4",
+  "cumulative_evidence": "PASS",
+  "claims": {
+    "C1": "VERIFIED_SCOPED",
+    "C2": "FALSIFIED_AS_PRINTED",
+    "C3": "FALSIFIED_AS_PRINTED",
+    "C4": "FALSIFIED_AS_PRINTED",
+    "C5": "FALSIFIED_SCOPED"
+  },
+  "interpretation_boundary": {
+    "claims_2_to_4": "printed universal statements fail on no-minimizer instances; corrected nonempty-solution interpretation is separate",
+    "claim_5": "broad split-bound comparison falsified; corrected H.6 hierarchy reported separately"
+  },
+  "historical_score": {
+    "points": 5,
+    "total": 10,
+    "current_score_claim": false,
+    "forecast": "8/10-10/10"
+  },
+  "publication_allowed": false,
+  "official_author_endorsement": false
+}
+

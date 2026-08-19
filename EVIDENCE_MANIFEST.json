@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "paper_source": "arXiv:2601.22370v4",
+  "overall_status": "PARTIAL_CLAIM_1_VERIFIED_CLAIMS_2_TO_5_FALSIFIED_AS_PRINTED",
+  "required_evidence": [
+    "reproduction/run.py",
+    "reproduction/verify_claim1.py",
+    "reproduction/verify_claims234.py",
+    "reproduction/claim5.py",
+    ".openresearch/artifacts/claim1",
+    ".openresearch/artifacts/claim2",
+    ".openresearch/artifacts/claim3",
+    ".openresearch/artifacts/claim4",
+    ".openresearch/artifacts/claim5",
+    ".openresearch/artifacts/cumulative/run_f4ec095c.json",
+    "space/pages",
+    "space/evidence",
+    "branch-audit.md"
+  ],
+  "controls": {
+    "independent_checkers": true,
+    "negative_controls": true,
+    "source_version_pinned": true,
+    "cumulative_run_recorded": true
+  },
+  "source_hashes": {
+    "arxiv_v4": "8e673443dd09f2952988fb9348c43f2b52d78442665d7b764e01586a8a7c5205"
+  }
+}
+
